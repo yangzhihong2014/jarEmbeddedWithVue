@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
+    
+    <groupId>org.example</groupId>
+    <artifactId>jarEmbeddedWithVue</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>helloJava</module>
+        <module>ui</module>
+    </modules>
+    <name>jarEmbeddedWithVue</name>
+    <description>jar包内嵌vue项目</description>
+    
+    <properties>
+        <maven.resource.version>3.3.1</maven.resource.version>
+        <maven.compiler.version>3.7.0</maven.compiler.version>
+        <java.source.version>8</java.source.version>
+        <java.target.version>8</java.target.version>
+    </properties>
+    <dependencies>
+
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <!--编译插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.source.version}</source>
+                    <target>${java.target.version}</target>
+                    <encoding>${file.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
